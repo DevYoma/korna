@@ -24,6 +24,9 @@ const HomeMain = styled.main`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    gap: 0;
   }
 `;
 
@@ -33,7 +36,10 @@ const NewsfeedSection = styled.section`
 
   @media (max-width: 768px) {
     flex: 1;
-    max-width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0;
   }
 `;
 
@@ -44,8 +50,9 @@ const StaffPicksSection = styled.section`
   // max-width: 30%;
 
   @media (max-width: 768px) {
-    flex: 1;
-    max-width: 100%;
+    // flex: 1;
+    // max-width: 100%;
+    display: none;
   }
 `;
 
