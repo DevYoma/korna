@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Kakashi from "../../assets/kakashi.jpg";
+import Kakashi from "../../assets/kakashi.jpg"; 
 
 interface StaffPickItem {
   id: string;
@@ -11,6 +11,7 @@ interface StaffPickItem {
   publishedAt: string;
   source?: string;
   sourceName?: string;
+  showAuthor?: boolean;
 }
 
 const StaffListContainer = styled.div`
@@ -26,8 +27,8 @@ const StaffListHeader = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: bolder;
   color: #242424;
 `;
 
@@ -60,7 +61,7 @@ const SourceInfo = styled.div`
 
 const StaffTitle = styled.a`
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bolder;
   color: #242424;
   text-decoration: none;
   line-height: 20px;
@@ -108,6 +109,7 @@ const staffPicks: StaffPickItem[] = [
     publishedAt: "2d ago",
     source: "The Medium Handbook",
     sourceName: "Zulie @ Medium",
+    showAuthor: false
   },
   {
     id: "2",
@@ -118,6 +120,7 @@ const staffPicks: StaffPickItem[] = [
       avatar: Kakashi
     },
     publishedAt: "5d ago",
+    showAuthor: true
   },
   {
     id: "3",
@@ -127,6 +130,7 @@ const staffPicks: StaffPickItem[] = [
       avatar: Kakashi
     },
     publishedAt: "Sep 3",
+    showAuthor: true
   },
 ];
 
@@ -141,16 +145,22 @@ const StaffList = () => {
         <StaffItem key={pick.id}>
           {pick.source && (
             <SourceInfo>
-              In <a href={`/${pick.source.toLowerCase()}`}>{pick.source}</a> by{" "}
-              {pick.sourceName}
+              {/* In <a href={`/${pick.source.toLowerCase()}`}>{pick.source}</a> by{" "} */}
+              In {pick.source} by {pick.sourceName}
             </SourceInfo>
           )}
+          {pick.showAuthor && (
+            <AuthorInfo style={{ marginBottom: "8px" }}>
+              <Avatar src={pick.author.avatar} alt={pick.author.name} />
+              <AuthorName>{pick.author.name}</AuthorName>
+            </AuthorInfo>
+          )}
           <StaffTitle href={`/post/${pick.id}`}>{pick.title}</StaffTitle>
-          <AuthorInfo>
+          {/* <AuthorInfo>
             <Avatar src={pick.author.avatar} alt={pick.author.name} />
             <AuthorName>{pick.author.name}</AuthorName>
-            <TimeStamp>· {pick.publishedAt}</TimeStamp>
-          </AuthorInfo>
+          </AuthorInfo> */}
+          <TimeStamp>{pick.publishedAt}</TimeStamp>
         </StaffItem>
       ))}
       <StaffListHeader>

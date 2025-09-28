@@ -3,6 +3,14 @@ import NewsFeed from "../components/NewsFeed/NewsFeed";
 import styled from "styled-components";
 import StaffList from "../components/StaffList/StaffList";
 import Pic1 from "../assets/issue.png"
+import Gaara from "../assets/gaara.jpg"
+import Jiraiya from "../assets/jiraiya.jpg"
+// import Kakashi from "../assets/kakashi.jpg"
+import Minato from "../assets/minato.jpg"
+import Sai from "../assets/sai.jpg"
+import RecommendList from "../components/RecommendList/RecommendList";
+import Following from "../components/Following/Following";
+import ReadingList from "../components/ReadingList/ReadingList";
 
 const HomeMain = styled.main`
   display: flex;
@@ -30,6 +38,7 @@ const NewsfeedSection = styled.section`
 `;
 
 const StaffPicksSection = styled.section`
+  border-left: 1px solid #e5e5e5;
   // border: 2px dotted red;
   flex: 0 0 30%;
   // max-width: 30%;
@@ -74,7 +83,7 @@ const feedItems: FeedItem[] = [
     timeAgo: "4 hours ago",
     views: "2.3k",
     comments: 45,
-    image: Pic1,
+    image: Gaara,
   },
   {
     author: "Mike Johnson",
@@ -84,7 +93,7 @@ const feedItems: FeedItem[] = [
     timeAgo: "6 hours ago",
     views: "3.4k",
     comments: 56,
-    image: Pic1,
+    image: Jiraiya,
     clapped: true,
   },
   {
@@ -95,7 +104,31 @@ const feedItems: FeedItem[] = [
     timeAgo: "8 hours ago",
     views: "1.8k",
     comments: 23,
+    image: Minato,
+  },
+  {
+    author: "Alex Thompson",
+    title: "C# 12 Features That Will Change Your Development Game",
+    subtitle:
+      "Exploring the latest C# innovations including primary constructors, collection expressions, and advanced pattern matching.",
+    category: "C#",
+    timeAgo: "12 hours ago",
+    views: "2.8k",
+    comments: 42,
     image: Pic1,
+    clapped: true,
+  },
+  {
+    author: "Maria Rodriguez",
+    title: "Java Virtual Threads: A Performance Revolution",
+    subtitle:
+      "Deep dive into Project Loom's virtual threads and how they're transforming concurrent programming in Java.",
+    category: "Java",
+    timeAgo: "15 hours ago",
+    views: "3.1k",
+    comments: 51,
+    image: Gaara,
+    clapped: true,
   },
   {
     author: "David Brown",
@@ -106,7 +139,7 @@ const feedItems: FeedItem[] = [
     timeAgo: "10 hours ago",
     views: "4.2k",
     comments: 67,
-    image: Pic1,
+    image: Sai,
     clapped: true,
   },
 ];
@@ -133,6 +166,9 @@ const Home = () => {
       </NewsfeedSection>
       <StaffPicksSection>
         <StaffList />
+        <RecommendList />
+        <Following />
+        <ReadingList />
       </StaffPicksSection>
     </HomeMain>
   );

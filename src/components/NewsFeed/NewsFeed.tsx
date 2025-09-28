@@ -27,7 +27,7 @@ const FeedContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 1.5rem 0;
+  padding: 2.5rem 0;
   border-bottom: 1px solid #e5e5e5;
   gap: 1.5rem;
 
@@ -37,7 +37,8 @@ const FeedContainer = styled.div`
 `;
 
 const FeedContent = styled.div`
-  flex: 1;
+    flex: 1;
+  }
 `;
 
 const FeedHeader = styled.div`
@@ -62,7 +63,8 @@ const FeedTitle = styled.h2`
 const FeedSubtitle = styled.p`
   font-size: 1rem;
   color: #555;
-  margin-bottom: 0.8rem;
+  margin: 0.8rem 0;
+  line-height: 1.6;
 `;
 
 const FeedMeta = styled.div`
