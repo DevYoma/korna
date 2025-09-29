@@ -85,6 +85,10 @@ const IconText = styled.span`
   display: flex;
   align-items: center;
   gap: 0.3rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+  }
 `;
 
 const MetaRight = styled.div`

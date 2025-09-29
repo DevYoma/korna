@@ -35,9 +35,14 @@ const NewsfeedSection = styled.section`
   // max-width: 70%;
 
   @media (max-width: 768px) {
+    border: 1px solid blue;
     flex: 1;
     max-width: 90%;
     margin: 0 auto;
+    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 0;
   }
