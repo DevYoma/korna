@@ -14,12 +14,8 @@ import ReadingList from "../components/ReadingList/ReadingList";
 
 const HomeMain = styled.main`
   display: flex;
-  // border: 2px dotted blue;
-  width: 80%;
-  // max-width: 1440px;
   margin-left:auto;
   padding: 20px;
-  // gap: 2rem;
   overflow-x: hidden;
 
   @media (max-width: 768px) {
@@ -32,14 +28,11 @@ const HomeMain = styled.main`
 
 const NewsfeedSection = styled.section`
   flex: 0 0 70%;
-  // max-width: 70%;
 
   @media (max-width: 768px) {
-    border: 1px solid blue;
     flex: 1;
     max-width: 90%;
     margin: 0 auto;
-    // align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,13 +43,9 @@ const NewsfeedSection = styled.section`
 
 const StaffPicksSection = styled.section`
   border-left: 1px solid #e5e5e5;
-  // border: 2px dotted red;
   flex: 0 0 30%;
-  // max-width: 30%;
 
   @media (max-width: 768px) {
-    // flex: 1;
-    // max-width: 100%;
     display: none;
   }
 `;
