@@ -13,6 +13,8 @@ import Following from "../components/Following/Following";
 import ReadingList from "../components/ReadingList/ReadingList";
 
 const HomeMain = styled.main`
+  // border: 1px solid red;
+  width: 90%;
   display: flex;
   margin-left:auto;
   padding: 20px;
